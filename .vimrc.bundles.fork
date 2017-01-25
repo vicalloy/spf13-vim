@@ -1,0 +1,7 @@
+    " Python {
+        if count(g:spf13_bundle_groups, 'python')
+            Bundle 'davidhalter/jedi-vim'
+        endif
+    " }
+
+UnBundle 'pythoncomplete'
