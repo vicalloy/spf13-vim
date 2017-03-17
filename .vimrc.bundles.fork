@@ -4,4 +4,8 @@
         endif
     " }
 
+Bundle 'keith/swift.vim'
 UnBundle 'pythoncomplete'
+UnBundle 'jiangmiao/auto-pairs'
+UnBundle 'gorodinskiy/vim-coloresque'
+UnBundle 'jistr/vim-nerdtree-tabs'

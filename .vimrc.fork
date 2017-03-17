@@ -34,7 +34,11 @@ nnoremap tc :tabclose<CR>
 nnoremap <leader>ct :CtrlP<CR>
 
 nnoremap tt :NERDTree<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q! | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q! | endif
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowHidden=0
+let NERDTreeShowBookmarks=0
+
 let g:fencview_autodetect = 1   "打开文件时自动识别编码
 let g:fencview_checklines = 10 "检查前后10行来判断编码
 
@@ -45,11 +49,13 @@ au FileType javascript setlocal et sw=2 ts=2
 
 set clipboard=
 set virtualedit=
-let NERDTreeQuitOnOpen=0
-let NERDTreeShowHidden=0
 set nospell
 set nofoldenable
 
 let g:flake8_ignore='E501'
 let g:syntastic_python_checker_args = "--ignore E501,E128"
 let g:syntastic_python_flake8_args='--ignore=E501'
+
+set iskeyword-=.                    " '.' is an end of word designator
+set iskeyword-=#                    " '#' is an end of word designator
+set iskeyword-=-                    " '-' is an end of word designator
